@@ -17,6 +17,7 @@ const App = () => {
         .json()
         .then(videos => {
           setVideos(normalizeVideosSchema(videos));
+          // Set the first video in the list as the currently playing video.
           setCurrentVideo(videos[0].id);
         })
         .catch(err => console.error(err));
@@ -27,6 +28,7 @@ const App = () => {
 
   const playVideo = videoId => {
     setCurrentVideo(videoId);
+    // Play the selected video automatically.
     setAutoPlay(true);
   };
 

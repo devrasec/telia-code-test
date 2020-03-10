@@ -7,6 +7,7 @@ const Poster = ({ title, description, imagePath }) => {
   const [cursorCoords, setCursorCoords] = useState({ x: 0, y: 0 });
   const [showDescription, setShowDescription] = useState(false);
 
+  // Update the cursor coordinates.
   const _onMouseMove = e => {
     setCursorCoords({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
   };

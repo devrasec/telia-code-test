@@ -1,3 +1,4 @@
+// Data normalization.
 const normalizeVideoSchema = data => {
   if (!Array.isArray(data)) {
     throw new Error('The parameter data should be an array.');

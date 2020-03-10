@@ -3,19 +3,21 @@ import Poster from '../Poster';
 
 import './PlayList.css';
 
-const PlayList = ({ videos }) => {
+const PlayList = ({ videos, onClickItem }) => {
   return (
     <div className="PlayList">
-      {videos.map(({ id, name, description, image }) => (
-        <div className="PlayList_Item">
-          <Poster
-            key={id}
-            title={name}
-            description={description}
-            imagePath={image}
-          />
-        </div>
-      ))}
+      {videos.keys.map(videoId => {
+        const { name, description, image } = videos.entities[videoId];
+        return (
+          <div
+            onClick={() => onClickItem(videoId)}
+            className="PlayList_Item"
+            key={videoId}
+          >
+            <Poster title={name} description={description} imagePath={image} />
+          </div>
+        );
+      })}
     </div>
   );
 };

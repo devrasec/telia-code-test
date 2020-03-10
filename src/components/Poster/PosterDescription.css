@@ -1,0 +1,17 @@
+.PosterDescription {
+  background-color: white;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+  font-size: 12px;
+  width: 300px;
+  pointer-events: none;
+  text-align: left;
+}
+
+.PosterDescription--visible {
+  display: block;
+}

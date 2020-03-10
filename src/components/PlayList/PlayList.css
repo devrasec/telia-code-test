@@ -1,0 +1,16 @@
+.PlayList {
+  display: flex;
+}
+
+.PlayList_Item {
+  width: 25%;
+  padding: 0 4px;
+}
+
+.PlayList_Item:first-of-type {
+  padding-left: 0;
+}
+
+.PlayList_Item:last-of-type {
+  padding-right: 0;
+}

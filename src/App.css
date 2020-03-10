@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 768px;
+}
+
+.App_Content {
+  width: 640px;
+}

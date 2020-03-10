@@ -1,0 +1,15 @@
+.Poster {
+  text-align: center;
+}
+
+.Poster_Title {
+  display: block;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.Poster_Image {
+  width: 100%;
+  max-width: 100%;
+}

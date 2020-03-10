@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Helmet from 'react-helmet';
 import PlayList from './components/PlayList';
 import VideoPlayer from './components/VideoPlayer';
 import normalizeVideosSchema from './lib/normalizeVideosSchema';
@@ -34,13 +35,16 @@ const App = () => {
 
   if (!videos || !currentVideoId) return null;
 
+  const currentVideo = videos.entities[currentVideoId];
+
   return (
     <div className="App">
+      <Helmet>
+        <title>Currently playing "{currentVideo.name}"</title>
+        <meta name="description" content={currentVideo.description} />
+      </Helmet>
       <div className="App_Content">
-        <VideoPlayer
-          autoPlay={autoPlay}
-          videoSrc={videos.entities[currentVideoId].video}
-        />
+        <VideoPlayer autoPlay={autoPlay} videoSrc={currentVideo.video} />
         <PlayList videos={videos} onClickItem={playVideo} />
       </div>
     </div>
